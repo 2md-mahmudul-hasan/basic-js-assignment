@@ -1,15 +1,27 @@
-// Problem 1: 
+// ----------Problem 1: function mindGame()----------------------------
+/*Description of the mindGame function: 
+The mindGame function will receive a positive number as parameter 
+and then multifly the parameter with number 3, then add 10 with the 
+result then divide the result with number 2, then finally minus 5 from the result.
+Then the mindGame function return the final result.
+*/
 
-function mindGame(number){
-return (((number * 3) + 10)/2)-5;
+function mindGame(positiveNumber){
+  if(positiveNumber <= 0){
+    return "please give a positive number as parameter";
+  }else if(Number.isInteger(positiveNumber) === false){
+    return "input parameter must be number";
+  }else{
+    return (((positiveNumber * 3) + 10)/2)-5;
+  }
 }
 
-const output = mindGame(33)
-console.log(output)
+// const output = mindGame(33)
+// console.log(output)
 
 
 
-// Problem 2: 
+// ----------Problem 2: function evenOdd()----------------------------
 
 function evenOdd(givenString){
   if(givenString.length % 2 === 0){
